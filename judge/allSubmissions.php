@@ -9,6 +9,7 @@
 		<th>Problem</th>
 		<th>Submission</th>
 		<th>Project Download</th>
+		<th>Project Hash</th>
 		<th>Design Link</th>
 		<th>Project Link</th>
 	</tr>
@@ -58,7 +59,7 @@ function readIndex() {
 		<td><?php echo $row[1]; ?></td> <!-- Problem Number -->
 		<td><?php echo $row[2]; ?></td> <!-- Submission Number -->
 
-<!--		<td><a href=<?php echo $row[3]; ?>><?php echo $row[3]; ?></a></td> Project download -->
+		<!-- Project Download -->
 		<td>
 		<form action=download.php method="post" enctype="multipart/form-data">
 			<input type="hidden" name="team" value=<?php echo $row[0]; ?>>
@@ -67,6 +68,9 @@ function readIndex() {
 			<input type="submit" value="Download .sb2" id="download">
 		</form>
 		</td>
+
+		<!-- Project Hash -->
+		<td><?php echo str_replace("\\n", "<br>", $row[3]); ?></td>
 
 		<!-- Design doc -->
 		<td>
@@ -83,7 +87,7 @@ function readIndex() {
 
 		<!-- Project Link -->
 		<td>
-		<a href="<?php echo $row[3]; ?>" target="_blank">scratch.mit.edu</a>
+		<a href="<?php echo $row[4]; ?>" target="_blank">scratch.mit.edu</a>
 		</td>
 	</tr>
 	<?php
