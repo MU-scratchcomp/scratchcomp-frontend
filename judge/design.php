@@ -1,4 +1,4 @@
-<?php include('judgeHeader.php'); ?>
+<?php include('header.php'); ?>
 
 <h2>Design Document for Team <?php echo $_POST["team"]; ?>, Problem <?php echo $_POST["problem"]; ?>, Submission <?php echo $_POST["submission"]; ?></h2>
 

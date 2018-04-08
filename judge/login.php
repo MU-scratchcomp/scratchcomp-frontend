@@ -6,7 +6,7 @@
 
 <p>Enter your name and the judging password. Use the same name each time you log in.
 
-<form action="judgeAuthenticate.php" method="post" enctype="multipart/form-data">
+<form action="authenticate.php" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="redirect" value=<?php echo $_SESSION["redirect"]?>>
 	
 	<p>Name:

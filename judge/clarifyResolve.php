@@ -1,4 +1,4 @@
-<?php include('judgeHeader.php'); ?>
+<?php include('header.php'); ?>
 
 <?php
 include('settings.php');
@@ -12,20 +12,19 @@ function resolveClarification() {
 	foreach ($dir as $fileinfo) {
 		if (!$fileinfo->isDot()) {
 			$filename = $fileinfo->getFilename();
-			if (substr($filename, 0, strlen("clarification")) == "clarification") {
+			if (substr($filename, 0, strlen("question")) == "question") {
 				$read_data = json_decode(file_get_contents($clarify_dir . "/" . $filename));
 				if ($read_data->time == $_POST["clarificationTime"]) {
 					$write_data = array(
 							'team' => $read_data->team,
 							'time' => $read_data->time,
-							'judge' => $read_data->judge,
-							'clarification' => $read_data->clarification,
+							'question' => $read_data->question,
 							'status' => $_POST["status"]);
 
 					if (file_put_contents($clarify_dir . "/" . $filename, json_encode($write_data))) {
-						echo "<p>Successfully updated clarification.";
+						echo "<p>Successfully updated question.";
 					} else {
-						echo "<p>Failed to update clarification.";
+						echo "<p>Failed to update question.";
 					}
 					return;
 				}

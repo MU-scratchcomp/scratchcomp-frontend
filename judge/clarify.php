@@ -1,8 +1,8 @@
-<?php include('judgeHeader.php'); ?>
+<?php include('header.php'); ?>
 
 <h1>New clarification</h1>
 
-<form action="judgeClarifySubmit.php" method="post" enctype="multipart/form-data">
+<form action="clarifySubmit.php" method="post" enctype="multipart/form-data">
 	<p>Team number (-1 for all teams):
 	<input type="text" name="team" id="teamNumber">
 

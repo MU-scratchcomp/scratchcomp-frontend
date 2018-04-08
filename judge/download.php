@@ -1,4 +1,4 @@
-<?php include('judgeHeader.php'); ?>
+<?php include('header.php'); ?>
 
 <p>Beginning download of project file from team
 <?php echo $_POST["team"]; ?>

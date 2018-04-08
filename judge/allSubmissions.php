@@ -1,4 +1,4 @@
-<?php include('judgeHeader.php'); ?>
+<?php include('header.php'); ?>
 
 <p>This is the list of all submissions.
 
@@ -30,7 +30,7 @@ function readIndex() {
 		if ($row[0] != '') {
 		?><tr>
 		<td>
-		<form action=<?php if (file_exists($save_dir . "/team" . $row[0] . "/feedback/prob" . $row[1] . "sub" . $row[2] . ".txt")) { echo "judgeViewGrade.php"; } else { echo "judgeGrade.php"; }?> method="post" enctype="multipart/form-data">
+		<form action=<?php if (file_exists($save_dir . "/team" . $row[0] . "/feedback/prob" . $row[1] . "sub" . $row[2] . ".txt")) { echo "viewGrade.php"; } else { echo "grade.php"; }?> method="post" enctype="multipart/form-data">
 			<input type="hidden" name="team" value=<?php echo $row[0]; ?>>
 			<input type="hidden" name="problem" value=<?php echo $row[1]; ?>>
 			<input type="hidden" name="submission" value=<?php echo $row[2]; ?>>
@@ -50,7 +50,7 @@ function readIndex() {
 
 <!--		<td><a href=<?php echo $row[3]; ?>><?php echo $row[3]; ?></a></td> Project link -->
 		<td>
-		<form action=judgeDownload.php method="post" enctype="multipart/form-data">
+		<form action=download.php method="post" enctype="multipart/form-data">
 			<input type="hidden" name="team" value=<?php echo $row[0]; ?>>
 			<input type="hidden" name="problem" value=<?php echo $row[1]; ?>>
 			<input type="hidden" name="submission" value=<?php echo $row[2]; ?>>
@@ -60,7 +60,7 @@ function readIndex() {
 		
 		<td>
 		<?php if (file_exists($save_dir . "/team" . $row[0] . "/design/prob" . $row[1] . "sub" . $row[2] . ".txt")) { ?>
-		<form action=judgeDesign.php method="post" enctype="multipart/form-data">
+		<form action=design.php method="post" enctype="multipart/form-data">
 			<input type="hidden" name="team" value=<?php echo $row[0]; ?>>
 			<input type="hidden" name="problem" value=<?php echo $row[1]; ?>>
 			<input type="hidden" name="submission" value=<?php echo $row[2]; ?>>

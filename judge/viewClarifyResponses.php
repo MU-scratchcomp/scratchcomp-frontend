@@ -1,4 +1,4 @@
-<?php include('judgeHeader.php'); ?>
+<?php include('header.php'); ?>
 
 <h1>All published clarifications</h1>
 
@@ -31,14 +31,14 @@ function showClarifications() {
 		<td>
 		<?php if ($clarification->status == 'published') { ?>
 			Published
-			<form action="judgeClarifyDelete.php" method="post" enctype="multipart/form-data">
+			<form action="clarifyDelete.php" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="status" value="deleted">
 				<input type="hidden" name="clarificationTime" value="<?php echo $clarification->time; ?>">
 				<input type="submit" value="Delete Clarification" id="resolve">
 			</form>
 		<?php } else { ?>
 			Deleted
-			<form action="judgeClarifyDelete.php" method="post" enctype="multipart/form-data">
+			<form action="clarifyDelete.php" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="status" value="published">
 				<input type="hidden" name="clarificationTime" value="<?php echo $clarification->time; ?>">
 				<input type="submit" value="Publish Clarification" id="resolve">

@@ -1,0 +1,14 @@
+<?php
+session_start();
+if (!isset($_SESSION['login']))
+{
+		$_SESSION['redirect'] = "main.php";
+		header("Location: login.php");
+} else {
+	include('header.php');
+	echo "<form action=\"logout.php\" method=\"post\" enctype=\"multipart/form-data\">	<p>Logged in as " . $_SESSION["name"] . " <input type=\"submit\" value=\"Logout\" id=\"logout\"> </form>";
+	echo "<a href=\"main.php\">Main judging page</a>";
+	echo "<hr>";
+}
+?>
+

@@ -1,4 +1,4 @@
-<?php include('judgeHeader.php'); ?>
+<?php include('header.php'); ?>
 
 <h1>All open clarification requests</h1>
 
@@ -29,14 +29,14 @@ function showClarifications() {
 		<td>
 		<?php if ($question->status == 'unresolved') { ?>
 			Unresolved
-			<form action="judgeClarifyResolve.php" method="post" enctype="multipart/form-data">
+			<form action="clarifyResolve.php" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="status" value="resolved">
 				<input type="hidden" name="clarificationTime" value="<?php echo $question->time; ?>">
 				<input type="submit" value="Resolve" id="resolve">
 			</form>
 		<?php } else { ?>
 			Resolved
-			<form action="judgeClarifyResolve.php" method="post" enctype="multipart/form-data">
+			<form action="clarifyResolve.php" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="status" value="unresolved">
 				<input type="hidden" name="clarificationTime" value="<?php echo $question->time; ?>">
 				<input type="submit" value="Unresolve" id="unresolve">
