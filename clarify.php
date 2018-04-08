@@ -7,11 +7,10 @@ include('settings.php');
 
 submitQuestion();
 function submitQuestion() {
-	$save_dir = getSaveDir();
-	$clarify_dir = $save_dir . "/clarify";
+	$target_dir = getUploadDir();
 
 	$filename = "question" . date("H-i-s-u") . ".txt";
-	$filepath = $clarify_dir . "/" . $filename;
+	$filepath = $target_dir . "/" . $filename;
 
 	$clarification = array(
 			'time' => date("r"),
