@@ -1,4 +1,5 @@
 <?php include('header.php'); ?>
+<?php include('securityHeader.php'); ?>
 <?php include('returnLink.php'); ?>
 
 <h1>Clarifications</h1>

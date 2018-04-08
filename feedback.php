@@ -1,16 +1,15 @@
 <?php include('header.php') ?>
+<?php include('securityHeader.php') ?>
 <?php include('returnLink.php') ?>
 
 <h1>Latest Feedback</h1>
 
 <?php
 include('settings.php');
-include(getDependencyDir() . "/scratchcompprefs.php");
 
 showFeedback();
 function showFeedback() {
-	$team = getTeam($_POST["teamPassword"]);
-	$feedback_dir = getSaveDir() . "/team" . $team . "/feedback";
+	$feedback_dir = getSaveDir() . "/team" . $_SESSION["teamNumber"] . "/feedback";
 
 	$dir = new DirectoryIterator($feedback_dir);
 	foreach ($dir as $fileinfo) {

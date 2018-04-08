@@ -1,29 +1,21 @@
 <?php include('header.php'); ?>
+<?php include('securityHeader.php'); ?>
 <?php include('returnLink.php'); ?>
 
 <?php
 include('settings.php');
-include(getDependencyDir() . "/scratchcompprefs.php");
 
 submitQuestion();
 function submitQuestion() {
-	$team = getTeam($_POST["teamPassword"]);
-	if ($team == '') {
-		echo "Invalid team password.";
-		return;
-	}
-
 	$save_dir = getSaveDir();
 	$clarify_dir = $save_dir . "/clarify";
-
-	mkdir($clarify_dir, 0777, true);
 
 	$filename = "question" . date("H-i-s-u") . ".txt";
 	$filepath = $clarify_dir . "/" . $filename;
 
 	$clarification = array(
 			'time' => date("r"),
-			'team' => $team,
+			'team' => $_SESSION["teamNumber"],
 			'status' => 'unresolved',
 			'question' => $_POST["question"]);
 

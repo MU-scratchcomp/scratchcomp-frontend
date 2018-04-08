@@ -1,6 +1,7 @@
 <html>
 <body>
 <?php include('header.php'); ?>
+<?php include('securityHeader.php'); ?>
 <hr>
 <p>Welcome to the 2017 Marquette ACM Programming Competition, Scratch Division!
 
@@ -48,42 +49,24 @@
 		<input type="file" name="designFile" id="designFile">
 	</div>
 	
-	<br>Team Password:
-	<input type="password" name="teamPassword", id="teamPassword" required>
-
 	<p><input type="submit" value="Submit" name="submit">	
 </form>
 
 
 <hr>
-<h2>Get Feedback</h2>
+<h2>Feedback</h2>
+<p><a href="feedback.php">Get Feedback</a>
 <p>Check this page regularly after submitting a solution.
-<form action="feedback.php" method="post" enctype="multipart/form-data">
-	<p>Team Password:
-	<input type="password" name="teamPassword" required>
-
-	<p><input type="submit" value="Retrieve Feedback" name="getfeedback">
-</form>
 
 
 <hr>
 <h2>Request Clarification</h2>
 <p>Use this form to ask for clarification on the competition rules, question prompts, or grading process. Feel free to talk to your room proctor first if it's about submitting your work or something else housekeeping-related. Most questions will be posted for everyone to see, so check this page regularly.
 <form action="clarify.php" method="post" enctype="multipart/form-data">
-	<p>Team Password:
-	<input type="password" name="teamPassword" required>
-
 	<p>Your question or concern:
 	<input type="text" name="question" required>
 
 	<p><input type="submit" value="Ask Question" name="askquestion">
 </form>
-<h3>View Clarifications</h3>
-<form action="viewclarify.php" method="post" enctype="multipart/form-data">
-	<p>Team Password:
-	<input type="password" name="teamPassword" required>
-	<br>
-	<input type="submit" value="View All Clarifications" name="viewclarify">
-</form>
-
+<p><a href="viewclarify.php">View Clarifications</a>
 

@@ -1,7 +1,7 @@
 <?php
 
 function getDependencyDir() {
-	return "../ScratchCompDep";
+	return "../scratchcomp-appdata/configuration";
 }
 
 function getUploadDir() {

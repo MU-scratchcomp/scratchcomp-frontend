@@ -1,2 +1,2 @@
-<p><a href="http://www.mscs.mu.edu/~cmorley/">Return to the competition page.</a>
+<p><a href="scratch.php">Return to the competition page.</a>
 
