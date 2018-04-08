@@ -10,10 +10,12 @@
 		<th>Question</th>
 	</tr>
 <?php
-include('settings.php');
+include('../settings.php');
+include('../Parsedown.php');
 
 showClarifications();
 function showClarifications() {
+	$Parsedown = new Parsedown();
 	$save_dir = getSaveDir();
 	$clarify_dir = $save_dir . "/clarify";
 
@@ -46,7 +48,11 @@ function showClarifications() {
 		
 		<td><?php echo $question->team; ?></td>
 		<td><?php echo $question->time; ?></td>
-		<td><?php echo $question->question; ?></td>
+		<td>
+		<div style="background-color:#EBEDEF;padding:1px 10px;">
+		<?php echo $Parsedown->text($question->question); ?>
+		</div>
+		</td>
 	</tr>
 				<?php
 			}

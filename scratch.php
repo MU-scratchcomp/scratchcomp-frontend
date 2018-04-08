@@ -3,7 +3,7 @@
 <?php include('header.php'); ?>
 <?php include('securityHeader.php'); ?>
 <hr>
-<p>Welcome to the 2017 Marquette ACM Programming Competition, Scratch Division!
+<p>Welcome to the 2018 Marquette ACM Programming Competition, Scratch Division!
 
 <hr>
 <p><a href="CompetitionInstructions.pdf">Competition Instructions and Rules</a>
@@ -64,8 +64,8 @@
 <p>Use this form to ask for clarification on the competition rules, question prompts, or grading process. Feel free to talk to your room proctor first if it's about submitting your work or something else housekeeping-related. Most questions will be posted for everyone to see, so check this page regularly.
 <form action="clarify.php" method="post" enctype="multipart/form-data">
 	<p>Your question or concern:
-	<input type="text" name="question" required>
-
+	<br>
+	<textarea name="question" rows="5" cols="50"></textarea>
 	<p><input type="submit" value="Ask Question" name="askquestion">
 </form>
 <p><a href="viewclarify.php">View Clarifications</a>

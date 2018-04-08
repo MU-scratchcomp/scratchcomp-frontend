@@ -7,7 +7,7 @@ include(getDependencyDir() . '/scratchcompprefs.php');
 authenticate();
 function authenticate() {
 		$teamNumber = getTeam($_POST["teamPassword"]);
-		if ($teamNumber == "-1") {
+		if ($teamNumber == "-1" || $teamNumber == "") {
 			echo "<p>Invalid password.";
 		} else {
 			session_start();

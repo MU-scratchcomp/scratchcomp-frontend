@@ -2,18 +2,14 @@
 
 <?php
 session_start();
-include('settings.php');
-include(getDependencyDir() . "/scratchcompprefs.php");
+include('../settings.php');
 
 submitClarification();
 function submitClarification() {
-	$save_dir = getSaveDir();
-	$clarify_dir = $save_dir . "/clarify";
-
-	mkdir($clarify_dir, 0777, true);
+	$upload_dir = getUploadDir();
 
 	$filename = "clarification" . date("H-i-s-u") . ".txt";
-	$filepath = $clarify_dir . "/" . $filename;
+	$filepath = $upload_dir . "/" . $filename;
 
 	$clarification = array(
 			'time' => date("r"),

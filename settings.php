@@ -1,15 +1,15 @@
 <?php
 
 function getDependencyDir() {
-	return "../scratchcomp-appdata/configuration";
+	return "/users/projects/acm/scratchcomp-appdata/configuration";
 }
 
 function getUploadDir() {
-	return "uploads";
+	return "/users/projects/acm/scratch/uploads";
 }
 
 function getSaveDir() {
-	return "../ScratchCompResults_copy/submissions";
+	return "/users/projects/acm/scratchcomp-appdata/data/submissions";
 	//return "submissions";
 }
 

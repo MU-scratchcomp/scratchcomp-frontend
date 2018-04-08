@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 
 <?php
-include('settings.php');
+include('../settings.php');
 
 resolveClarification();
 function resolveClarification() {

@@ -5,7 +5,7 @@
 , problem <?php echo $_POST["problem"]; ?>, submission <?php echo $_POST["submission"]; ?></p>
 
 <?php
-include('settings.php');
+include('../settings.php');
 
 beginDownload();
 function beginDownload() {

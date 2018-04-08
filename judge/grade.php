@@ -9,7 +9,8 @@
 	<p>Score:
 	<input type="text" name="score" required>
 	<p>Feedback:
-	<input type="text" name="feedback" required>
+	<br>
+	<textarea name="feedback" rows="10" cols="100"></textarea>
 	<br>
 	<input type="submit" value="Submit" required>
 </form>

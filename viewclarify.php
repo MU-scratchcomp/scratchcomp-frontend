@@ -7,9 +7,11 @@
 <?php
 include('settings.php');
 include(getDependencyDir() . "/scratchcompprefs.php");
+include('Parsedown.php');
 
 showClarifications();
 function showClarifications() {
+	$Parsedown = new Parsedown();
 	$team = getTeam($_POST["teamPassword"]);
 
 	$save_dir = getSaveDir();
@@ -27,7 +29,9 @@ function showClarifications() {
 <hr>
 <h3>Clarification for <?php if ($clarification->team == '-1') { echo "all teams"; } else { echo "your team"; } ?></h3>
 <p>Time of clarification: <?php echo $clarification->time; ?>
-<p><?php echo $clarification->clarification; ?>
+<div style="background-color:#EBEDEF;padding:1px 10px;">
+<?php echo $Parsedown->text($clarification->clarification); ?>
+</div>
 					<?php
 				}
 			}

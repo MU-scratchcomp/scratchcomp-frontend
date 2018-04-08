@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>This is the login page for the 2017 Marquette ACM Programming Competition, Scratch Division, judging software.
+<p>This is the login page for the 2018 Marquette ACM Programming Competition, Scratch Division, judging software.
 
 <p>Leave if you are not judging this competition.
 

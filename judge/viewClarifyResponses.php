@@ -11,10 +11,12 @@
 		<th>Clarification</th>
 	</tr>
 <?php
-include('settings.php');
+include('../settings.php');
+include('../Parsedown.php');
 
 showClarifications();
 function showClarifications() {
+	$Parsedown = new Parsedown();
 	$save_dir = getSaveDir();
 	$clarify_dir = $save_dir . "/clarify";
 
@@ -49,7 +51,11 @@ function showClarifications() {
 		<td><?php echo $clarification->team; ?></td>
 		<td><?php echo $clarification->time; ?></td>
 		<td><?php echo $clarification->judge; ?></td>
-		<td><?php echo $clarification->clarification; ?></td>
+		<td>
+		<div style="background-color:#EBEDEF;padding:1px 10px;">
+		<?php echo $Parsedown->text($clarification->clarification); ?>
+		</div>
+		</td>
 	</tr>
 				<?php
 			}

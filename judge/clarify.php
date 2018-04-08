@@ -7,7 +7,8 @@
 	<input type="text" name="team" id="teamNumber">
 
 	<p>Clarification:
-	<input type="text" name="clarification" id="clarification">
+	<br>
+	<textarea name="clarification" rows="10" cols="100"></textarea>
 
 	<input type="submit" value="Submit" id="submit">
 </form>

@@ -6,9 +6,11 @@
 
 <?php
 include('settings.php');
+include('Parsedown.php');
 
 showFeedback();
 function showFeedback() {
+	$Parsedown = new Parsedown();
 	$feedback_dir = getSaveDir() . "/team" . $_SESSION["teamNumber"] . "/feedback";
 
 	$dir = new DirectoryIterator($feedback_dir);
@@ -29,9 +31,10 @@ function showFeedback() {
 <hr>
 <h2>Problem <?php echo $problem ?>, Submission <?php echo $submission ?></h2>
 <p>Score: <?php echo $feedback->score ?>
-<p>Feedback: <?php echo $feedback->feedback ?>
-
-
+<p>Feedback:
+<div style="background-color:#EBEDEF;padding:1px 10px;">
+<?php echo $Parsedown->text($feedback->feedback); ?>
+</div>
 		<?php			
 		}
 	}

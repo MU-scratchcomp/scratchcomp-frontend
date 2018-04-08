@@ -1,7 +1,7 @@
 <h>Authentication
 <?php
 
-include('settings.php');
+include('../settings.php');
 
 authenticate();
 function authenticate() {
