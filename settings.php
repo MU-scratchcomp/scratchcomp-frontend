@@ -10,10 +10,5 @@ function getUploadDir() {
 
 function getSaveDir() {
 	return "/users/projects/acm/scratchcomp-appdata/data/submissions";
-	//return "submissions";
-}
-
-function getJudgingPassword() {
-	return "scratchrox";
 }
 ?>
