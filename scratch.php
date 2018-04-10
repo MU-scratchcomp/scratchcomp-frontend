@@ -45,7 +45,8 @@
 	<input type="file" name="projectFile" id="projectFile" required>
 
 	<div id="creativeSubmit" hidden>
-		(Creative Section) Design document:
+		Creative Section Design Document:<br>
+		(.txt file from Notepad - markdown formatting is supported - <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet'>formatting guide</a>)
 		<input type="file" name="designFile" id="designFile">
 	</div>
 	
