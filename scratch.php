@@ -15,13 +15,36 @@
 <form action="submit.php" method="post" enctype="multipart/form-data">
 	<script type="text/javascript">
 	function hideCreative() {
+		hideDesignFile();
+		hideDesignLink();	
 		document.getElementById('creativeSubmit').style.display = 'none';
-		document.getElementById('designFile').value = '';
-		document.getElementById('designFile').required = false;
+		document.getElementById('designFileOption').required = false;
+		document.getElementById('designFileOption').checked = false;
+		document.getElementById('designLinkOption').checked = false;
 	}
 	function showCreative() {
 		document.getElementById('creativeSubmit').style.display = 'inline';
+		document.getElementById('designFileOption').required = true;
+	}
+	function showDesignFile() {
+		hideDesignLink();
+		document.getElementById('designFileSubmit').style.display = 'inline';
 		document.getElementById('designFile').required = true;
+	}
+	function hideDesignFile() {
+		document.getElementById('designFileSubmit').style.display = 'none';
+		document.getElementById('designFile').value = '';
+		document.getElementById('designFile').required = false;
+	}
+	function showDesignLink() {
+		hideDesignFile();
+		document.getElementById('designLinkSubmit').style.display = 'inline';
+		document.getElementById('designLink').required = true;
+	}
+	function hideDesignLink() {
+		document.getElementById('designLinkSubmit').style.display = 'none';
+		document.getElementById('designLink').value = '';
+		document.getElementById('designLink').required = false;
 	}
 	</script>
 
@@ -29,15 +52,15 @@
 	<table border=1>
 		<td><label for="probPractice">Practice</label>
 		<input type="radio" name="probRadio" id="probPractice" value="0" onClick="hideCreative()" required checked></td>
-		<td><label for="probPractice">1</label>
+		<td><label for="prob1">1</label>
 		<input type="radio" name="probRadio" id="prob1" value="1" onClick="hideCreative()" ></td>
-		<td><label for="probPractice">2</label>
+		<td><label for="prob2">2</label>
 		<input type="radio" name="probRadio" id="prob2" value="2" onClick="hideCreative()" ></td>
-		<td><label for="probPractice">3</label>
+		<td><label for="prob3">3</label>
 		<input type="radio" name="probRadio" id="prob3" value="3" onClick="hideCreative()" ></td>
-		<td><label for="probPractice">4</label>
+		<td><label for="prob4">4</label>
 		<input type="radio" name="probRadio" id="prob4" value="4" onClick="showCreative()" ></td>
-		<td><label for="probPractice">5</label>
+		<td><label for="prob5">5</label>
 		<input type="radio" name="probRadio" id="prob5" value="5" onClick="showCreative()" ></td>
 	</table>
 
@@ -46,8 +69,23 @@
 
 	<div id="creativeSubmit" hidden>
 		Creative Section Design Document:<br>
-		(.txt file from Notepad - markdown formatting is supported - <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet'>formatting guide</a>)<br>
-		<input type="file" name="designFile" id="designFile">
+
+		<table border=1>
+			<td><label for="designFileOption">.txt File</label>
+			<input type="radio" name="designRadio" id="designFileOption" value="file" onClick="showDesignFile()" ></td>
+			<td><label for="designLinkOption">Google Doc</label>
+			<input type="radio" name="designRadio" id="designLinkOption" value="link" onClick="showDesignLink()" ></td>
+		</table>
+		<br>
+
+		<div id="designFileSubmit" hidden>
+			(.txt file from Notepad - markdown formatting is supported - <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet'>formatting guide</a>)<br>
+			<input type="file" name="designFile" id="designFile">
+		</div>
+		<div id="designLinkSubmit" hidden>
+			Share link to a Google Document:<br>
+			<input type="text" name="designLink" id="designLink">
+		</div>
 	</div>
 	
 	<p><input type="submit" value="Submit" name="submit">	

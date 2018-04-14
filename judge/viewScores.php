@@ -21,6 +21,9 @@ function readIndex() {
 				echo $team . " ";
 			}
 		}
+?>
+<meta http-equiv="refresh" content="0; URL=main.php">
+<?php
 	}	
 ?>
 <table border=1 id="maintable">
