@@ -13,7 +13,8 @@ function authenticate() {
 			session_start();
 			$_SESSION["teamlogin"] = 1;
 			$_SESSION["teamNumber"] = $teamNumber;
-			echo "<p>You have successfully been authenticated, team " . $teamNumber;
+			$_SESSION["teamName"] = getTeamName($teamNumber);
+			echo "<p>You have successfully been authenticated, team " . $_SESSION["teamNumber"] . ": " . $_SESSION["teamName"];
 			return;
 		}
 }

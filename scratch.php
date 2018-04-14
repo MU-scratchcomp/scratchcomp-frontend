@@ -46,7 +46,7 @@
 
 	<div id="creativeSubmit" hidden>
 		Creative Section Design Document:<br>
-		(.txt file from Notepad - markdown formatting is supported - <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet'>formatting guide</a>)
+		(.txt file from Notepad - markdown formatting is supported - <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet'>formatting guide</a>)<br>
 		<input type="file" name="designFile" id="designFile">
 	</div>
 	

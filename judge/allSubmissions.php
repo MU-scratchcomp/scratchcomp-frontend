@@ -15,6 +15,7 @@
 	</tr>
 <?php
 include('../settings.php');
+include(getDependencyDir() . '/scratchcompprefs.php');
 
 readIndex();
 function readIndex() {
@@ -55,7 +56,7 @@ function readIndex() {
 		</form>
 		</td>
 
-		<td><?php echo $row[0]; ?></td> <!-- Team -->
+		<td><?php echo $row[0] . ": " . getTeamName($row[0]); ?></td> <!-- Team -->
 		<td><?php echo $row[1]; ?></td> <!-- Problem Number -->
 		<td><?php echo $row[2]; ?></td> <!-- Submission Number -->
 

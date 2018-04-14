@@ -4,6 +4,7 @@
 
 <?php
 include('../settings.php');
+include(getDependencyDir() . "/scratchcompprefs.php");
 
 readIndex();
 function readIndex() {
@@ -42,7 +43,7 @@ function readIndex() {
 			$team = substr($subfile, 4);
 			?><tr>
 
-			<td><?php echo $team; ?></td> <!-- Team -->
+			<td><?php echo $team . ": " . getTeamName($team); ?></td> <!-- Team -->
 			<?php
 			$total = 0;
 			for ($prob = 0; $prob <= 5; $prob++) {
