@@ -11,14 +11,12 @@ function authenticate() {
 			$_SESSION["judgeLogin"] = 1;
 			$_SESSION["name"] = $_POST["name"];
 			echo "<p>You have successfully been authenticated, " . $_SESSION["name"];
+			echo "<p><a href=\"main.php\">Go to main judging page</a>";
 			return;
 		} else {
 			echo "<p>Sorry, but I could not authenticate you, " . $_POST["name"];
+			echo "<p><a href=\"login.php\">Return to login page</a>";
 		}
 }
 
 ?>
-
-<form action=<?php echo $_SESSION["judgeRedirect"]?> method="post" enctype="multipart/form-data">
-	<input type="submit" value="Click here to redirect and/or resubmit to the page you tried to access." id="submit">
-</form>
