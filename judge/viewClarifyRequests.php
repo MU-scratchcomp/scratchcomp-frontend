@@ -34,14 +34,18 @@ function showClarifications() {
 			<form action="clarifyResolve.php" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="status" value="resolved">
 				<input type="hidden" name="clarificationTime" value="<?php echo $question->time; ?>">
-				<input type="submit" value="Resolve" id="resolve">
+				<input type="submit" value="Mark as Resolved" id="resolve">
+			</form>
+			<form action="clarify.php" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="clarifyTeam" value="<?php echo $question->team?>">
+				<input type="submit" value="Write a Response" id="write">
 			</form>
 		<?php } else { ?>
 			Resolved
 			<form action="clarifyResolve.php" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="status" value="unresolved">
 				<input type="hidden" name="clarificationTime" value="<?php echo $question->time; ?>">
-				<input type="submit" value="Unresolve" id="unresolve">
+				<input type="submit" value="Marked as Unresolved" id="unresolve">
 			</form>
 		<?php } ?>
 		</td>

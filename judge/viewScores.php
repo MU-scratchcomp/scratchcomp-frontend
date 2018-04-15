@@ -18,11 +18,11 @@ function readIndex() {
 				$teamscores = json_decode(file_get_contents($file_path));
 				$teamscores->balloons = $teamscores->balloons + 1;
 				file_put_contents($file_path, json_encode($teamscores));
-				echo $team . " ";
+				//echo $team . " ";
 			}
 		}
 ?>
-<meta http-equiv="refresh" content="0; URL=main.php">
+<meta http-equiv="refresh" content="0; URL=viewScores.php">
 <?php
 	}	
 ?>

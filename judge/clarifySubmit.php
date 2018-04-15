@@ -21,6 +21,7 @@ function submitClarification() {
 	if (file_put_contents($filepath, json_encode($clarification))) {
 		chmod($filepath, 0777);
 		echo "<p>Submitted clarification successfully.";		
+		echo "<p>Don't forget to go mark the team's question as resolved: <a href=\"viewClarifyRequests.php\">Questions Page</a>";
 	} else {
 		echo "<p>Failed to submit clarification.";
 	}

@@ -30,12 +30,21 @@ function showFeedback() {
 			?>
 <hr>
 <h2>Problem <?php echo $problem ?>, Submission <?php echo $submission ?></h2>
+<?php
+			if ($feedback->score != "") {?>
 <p>Score: <?php echo $feedback->score ?>
+<?php
+				if ($feedback->feedback != "") {?>
 <p>Feedback:
 <div style="background-color:#EBEDEF;padding:1px 10px;">
 <?php echo $Parsedown->text($feedback->feedback); ?>
 </div>
+<?php
+				}
+			} else {?>
+<p>Not graded yet.
 		<?php			
+			}
 		}
 	}
 }

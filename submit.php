@@ -27,7 +27,7 @@ function uploadFile() {
 		$success = false;
 	}
 
-	if (true) {
+	if ((int)$problem >= 4) {
 		if ($_POST["designRadio"] == "file") {
 			$target_design_file = $target_dir . "/team" . $team . "prob" . $problem . "design" . basename($_FILES["designFile"]["name"]);
 

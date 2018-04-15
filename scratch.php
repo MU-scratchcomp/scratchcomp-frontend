@@ -95,17 +95,16 @@
 <hr>
 <h2>Feedback</h2>
 <p><a href="feedback.php">Get Feedback</a>
-<p>Check this page regularly after submitting a solution.
+<p>Check this feedback list regularly after submitting a solution.
 
 
 <hr>
-<h2>Request Clarification</h2>
-<p>Use this form to ask for clarification on the competition rules, question prompts, or grading process. Feel free to talk to your room proctor first if it's about submitting your work or something else housekeeping-related. Most questions will be posted for everyone to see, so check this page regularly.
+<h2>Clarifications</h2>
+<p>Use this form to ask for clarification on the competition rules, question prompts, or grading process. Feel free to talk to your room proctor first if it's about submitting your work or something else housekeeping-related. Most judge responses will be posted for everyone to see, so check the posted list regularly.
+<p><a href="viewclarify.php">View Clarifications Posted by Judges</a>
 <form action="clarify.php" method="post" enctype="multipart/form-data">
-	<p>Your question or concern:
-	<br>
+	<p>Submit a question:<br>
 	<textarea name="question" rows="5" cols="50"></textarea>
 	<p><input type="submit" value="Ask Question" name="askquestion">
 </form>
-<p><a href="viewclarify.php">View Clarifications</a>
 

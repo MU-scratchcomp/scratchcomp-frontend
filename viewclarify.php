@@ -6,13 +6,12 @@
 
 <?php
 include('settings.php');
-include(getDependencyDir() . "/scratchcompprefs.php");
 include('Parsedown.php');
 
 showClarifications();
 function showClarifications() {
 	$Parsedown = new Parsedown();
-	$team = getTeam($_POST["teamPassword"]);
+	$team = $_SESSION["teamNumber"];
 
 	$save_dir = getSaveDir();
 	$clarify_dir = $save_dir . "/clarify";

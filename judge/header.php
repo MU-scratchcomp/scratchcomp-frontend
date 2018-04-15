@@ -1,4 +1,4 @@
-<title>Computers Judging</title>
+<title>Scratch Nerds</title>
 <?php
 session_start();
 if (!isset($_SESSION['judgeLogin']))
